@@ -1,0 +1,199 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wp{
+	margin: 100px 700px;
+}
+.wp h3{
+	height:30px;
+	margin-bottom: 60px; 
+	text-indent: 80px;
+}
+
+ul li{
+	list-style: none;
+	background: #C1B6A0;
+	width: 250px;
+	height: 40px;
+	border-bottom:1px solid white;
+	text-align: center;
+	line-height: 40px;
+	color: #BB9264;
+	font-family: '宋体';
+	position: relative;
+	font-weight: bold;
+}
+ul .li1:hover{
+	width: 290px;
+	height: 60px;
+	font-size: 18px;
+	background-color: #C14456;
+	margin-left: -20px;
+	margin-top: -10px;
+	line-height: 60px;
+	color: #EED63E;
+}
+ul .li2:hover{
+	width: 230px;
+	height: 30px;
+	font-size: 14px;
+	background-color: #F0EA96;
+	color: #87AE41;
+	margin:5px 10px;
+	line-height: 30px;
+	
+}
+ul .li3:hover{
+	-webkit-animation: changeColor 7s infinite;
+	-webkit-animation-direction:alternate;
+}
+ul .li3:after{
+	content: '我是伪元素~ wula';
+	display:inline-block;
+	position: relative;
+	width: 250px;
+	height: 40px;
+	background: #C1B6A0;
+	color: #BB9264;
+	margin-top: 20px;
+	-webkit-animation:change 7s infinite;
+	-webkit-animation-direction:alternate;
+}
+/*适合chrome浏览器 不兼容ie*/
+@-webkit-keyframes change
+{
+	0%{
+		background: red;
+		left: 0;top: 0;
+	}
+	16%{
+		background: orange;
+		left: 270px;top: 0px;
+
+	}
+	32%{
+		background: yellow;
+		left: 270px;top: -194px;
+
+	}
+	48%{
+		background: green;
+		left: 0px;top: -194px;
+	}
+	64%{
+		background: greenyellow;
+		left: -270px;top: -194px;
+	}
+	80%{
+		background: blue;
+		left: -270px;top:0px;
+	}
+	100%{
+		background:purple;
+		left: 0px;top: 0;
+	}
+}
+@-webkit-keyframes changeColor
+{
+	0%{
+		background: red;
+	}
+	16%{
+		background: orange;
+	}
+	32%{
+		background: yellow;
+	}
+	48%{
+		background: green;
+	}
+	64%{
+		background: greenyellow;
+	}
+	80%{
+		background: blue;
+	}
+	100%{
+		background:purple;
+	}
+}
+.ballon{
+	position: relative;
+	left: 500px;
+	top: 100px;
+	width: 150px;
+	height: 150px;
+	/*background: #666;*/
+	border-radius: 50% 50% 25% 50%;
+	position: relative;
+	-webkit-transform:rotate(45deg);
+	box-shadow: 0 0 60px 40px pink inset;
+	-webkit-animation: ballon 2s infinite;
+	-webkit-animation-direction:alternate;
+}
+.ballon>p{
+	color: #80BD3E;
+	position:absolute;
+	top: 60px;
+	left: 30px;
+	-webkit-transform:rotate(-45deg);
+}
+.ballon div{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid pink;
+    position: absolute;
+    top: 140px;
+    left: 135px;
+    -webkit-transform:rotate(-45deg);
+}
+.ht{
+	display: none;
+
+}
+.heart{
+	top: 80px;
+	left: 1000px;
+	width: 100px;
+	height: 100px;
+	background: pink;
+	position: relative;
+	-webkit-transform:rotate(45deg);
+}
+
+.ht p{
+	color: #80BD3E;
+	position:absolute;
+	left: 1000px;
+	top: 250px;
+
+}
+.heart:before,.heart:after{
+	content: '';
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background: pink;
+	border-radius: 50%; 
+}
+.heart:before{
+	left: -45px;
+	bottom: 0;	
+}
+.heart:after{
+	top: -45px;
+}
+.ballon:hover+.ht{
+	display: block;
+}
+@-webkit-keyframes ballon{
+	from{
+		top: 100px;
+	}to{
+		top: 0;
+	}
+
+}
